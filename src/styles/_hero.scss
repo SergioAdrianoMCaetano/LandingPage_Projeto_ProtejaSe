@@ -1,0 +1,123 @@
+@use 'variaveis' ;
+
+.hero{
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/ProtejaSehero_desktop.png);
+    text-align: center;
+    background-size: cover;
+
+    img{
+        max-width: 100%;
+    }
+
+    @media(max-width: 768px){
+        margin-right: 12px;
+        padding:  2vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+        width: 100%;
+
+        h3{
+            padding-top: 12px;
+            margin-top: 200px;
+        }
+    }
+
+    .button{
+        margin-top: 2vw;
+        margin-bottom: 8px;
+        border: solid 1px;
+        background-color: variaveis.$corDeFundoBotaoDark;
+    }
+
+    &__content{
+        max-width: 640px;
+
+        @media(max-width: 768px){
+            .button{
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        h3{
+            display: block;
+            width: 85%;
+            text-align: bottom;
+        }
+
+        &__branding{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            max-width: 320px;
+            margin: 0 auto 38px;
+            a{
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                width: 40%;
+            }
+
+            img{
+                width: 100%;
+            }
+
+            @media(max-width: 768px){
+                max-width: 180px;
+            }
+        }
+
+        .title--small{
+            margin-bottom: 64px;
+            text-align: center;
+            width: 85%;
+        }
+
+        p{
+            margin-bottom: 20px;
+
+            &:last-child{
+                margin-top: 60px;
+            }
+        }
+
+        &__combos{
+            display: flex;
+            justify-content: space-between;
+
+            .button{
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                width: 40%;
+                
+            }
+
+            @media(max-width: 768px){
+                display: block;
+            }
+
+            &__combo{
+                width: calc(50% - 12px);
+                
+                @media(max-width: 768px){
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
+
+                img{
+                    max-height: 60px;
+                    
+                }
+
+                .button{
+                    margin-top: -50px;
+                }
+            }
+        }
+    }
+}
